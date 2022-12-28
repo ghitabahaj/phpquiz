@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
+
+*{
+  font-family: 'Catamaran', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.content{
+ background-color: lightsteelblue;
+ width: 65%;
+ margin: auto;
+ height: 4em;
+ border-radius: 2em;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: ghostwhite;
+ padding-top: 1em;
+ padding-bottom: 1em;
+
+}
+
+.choice-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    width: 60%;
+    font-size: 1rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1em;
+  }
+
+  .choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+  }
+  .choice-prefix {
+   color: navy;
+   width: 5%;
+  }
+.choice-text{
+    width: 95%;
+}
+  .correct {
+    background-color: #38cc5bca;
+  }
+  
+  .incorrect {
+    background-color: #e74858ae;
+  }
+
+  #hud {
+    display: flex;
+    justify-content: space-around;
+  }
+  .hud-prefix {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  #progressBar {
+    width: 10rem;
+    height: 2rem;
+    border: 0.2rem solid #a0a7c1;
+    border-radius: 1em;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #progressBarFull {
+    height: 1.7rem;
+    background-color: #a0a7c1;
+    border-radius: 1em;
+    width: 0%;
+    transition: all 0.3 ease;
+  }
+
+  .result,.guide,.container{
+    background-color: aliceblue;
+    margin: auto;
+    width: 75%;
+    margin-top: 5em;
+    padding: auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    box-shadow: 0 0.4rem 1rem 0 rgba(141, 178, 196, 0.5);
+  }
+  
+  .guide,.game,.result{
+      display: none ;
+  }
+  .hidden{
+    opacity: 0;
+  }
+.guide{
+  display: flex;
+  flex-direction: column;
+  h3{
+    margin-bottom: 1em;
+  }
+  div{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    i{
+          margin-right: 1em;
+        }
+      .para{
+        font-size: 1.1em;
+        width: 80%;
+        text-align: center;
+      }
+    
+  } 
+   button{
+       width: 150px;
+        background-color: white;
+        border-color: darkslateblue;
+        color: darkslateblue;
+        border-radius: 0.5em;
+        padding: 10px 30px;
+        font-size: large;
+        cursor: pointer;
+        margin: auto;
+        margin-top: 1em;
+      }
+}
+
+.result{
+  flex-direction: column;
+
+  i{
+    font-size: 5em;
+    color: darkslateblue;
+    margin-bottom: 0.3em;
+  }
+  p{
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  #score1{
+    color: darkslateblue;
+    font-weight: bolder;
+    font-size: 3em;
+
+  }
+  button{
+    background-color: white;
+    border-color: darkslateblue;
+    color: darkslateblue;
+    border-radius: 0.5em;
+    padding: 10px 30px;
+    font-size: large;
+    cursor: pointer;
+    width: 150px;
+    margin: auto;
+
+  }
+}
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3em auto;
+  width: 60%;
+  #first-step{
+    background-color: rgb(0, 166, 255);
+    i{
+      color: white;
+    }
+  }
+  h3{
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(100, 188, 236, 0.394);
+    i{
+      font-size: 1.2em;
+    }
+  }
+  .to-step{
+    width: 50%;
+    background-color: rgba(100, 188, 236, 0.394);
+    height: 5px;
+    .to-step-fill1,.to-step-fill2{
+      width: 0% ;
+      height: 100%;
+      background-color: rgb(0, 166, 255);
+      transition: all .5s ease;
+
+    }
+    // .filled{
+    //   width: 100% !important;
+    // }
+  }
+
+}
+
+.active{
+  display: flex !important;
+}
+
+.hide{
+ display: none;
+}
